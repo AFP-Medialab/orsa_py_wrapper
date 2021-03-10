@@ -37,8 +37,6 @@ $ mv demo/libworsa.dlib demo/libworsa.so
 USAGE
 -----
 
-# TODO requirement.txt
-
 The wrapper can be accessed by importing orsa in python:
 ```
 from orsa import orsa
@@ -52,4 +50,4 @@ This library provides a single function `orsa.estimate_homography_py(im1, w1, h1
 * `inl` and `outl`: Numpy arrays that will contain a visual represensation of the inliers for `inl` and the outliers for `outl`. They both need to be of shape (`3`, `max(h1,h2) * max(w1,w2)/(w1+w2)`, `max(w1,w2)`) and be of type `np.float32`. It is not be computed when set to NULL.
 * `im1w`, `im2w`, `mosaic`: Numpy arrays that will contain respectively the warped `im1`, the warped `im2` and a mosaic made from the two. They all need to be of shape (`3`, `max(h1,h2)`, `max(w1,w2)`) and be of type `np.float32`. It is not be computed when set to NULL.
 
-A test code `main.py` is also provided to show how this can be used. Dependencies for this test code can be installed using the provided requirements file.
+A test code `main.py` is also provided to show how this can be used. Dependencies for this test code can be installed using the provided requirements file `requirements.txt`.
