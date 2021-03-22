@@ -26,9 +26,9 @@ mosaic = np.zeros((3, h, w), dtype = np.float32)
 
 detection = orsa.estimate_homography_py(im1, w1, h1, c1, im2, w2, h2, c2, 0, 0.6, H, inl, outl, im1w, im2w, mosaic)
 
-iio.write('in.png', inl.transpose(1,2,0))
-iio.write('out.png', outl.transpose(1,2,0))
+iio.write('out/in.png', inl.transpose(1,2,0))
+iio.write('out/out.png', outl.transpose(1,2,0))
 
-iio.write("im1_warped.png", im1w.transpose(1,2,0))
-iio.write("im2_warped.png", im2w.transpose(1,2,0))
-iio.write("mosaic.png", mosaic.transpose(1,2,0))
+iio.write("out/im1_warped.png", im1w.transpose(1,2,0))
+iio.write("out/im2_warped.png", im2w.transpose(1,2,0))
+iio.write("out/mosaic.png", mosaic.transpose(1,2,0))

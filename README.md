@@ -51,3 +51,22 @@ This library provides a single function `orsa.estimate_homography_py(im1, w1, h1
 * `im1w`, `im2w`, `mosaic`: Numpy arrays that will contain respectively the warped `im1`, the warped `im2` and a mosaic made from the two. They all need to be of shape (`3`, `max(h1,h2)`, `max(w1,w2)`) and be of type `np.float32`. It is not be computed when set to NULL.
 
 A test code `main.py` is also provided to show how this can be used. Dependencies for this test code can be installed using the provided requirements file `requirements.txt`.
+
+
+DOCKER 
+-----
+
+Build images
+
+````
+$ docker build --tag envisu4-orsa-py-wrapper-demo:<version> .
+````
+
+Run images
+Create out folder to get result in the host
+````
+$ docker run -v $PWD/out:/app/out -it envisu4-orsa-py-wrapper-demo:0.2
+# cp app
+# python main.py
+````
+
